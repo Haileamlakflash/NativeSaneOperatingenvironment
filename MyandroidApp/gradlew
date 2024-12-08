@@ -1,12 +1,5 @@
-@echo off
-rem Gradle Wrapper for Windows
-set VERSION=7.3.3
-set DIST=gradle-%VERSION%-all.zip
-set URL=https://services.gradle.org/distributions/%DIST%
-set DIR=%CD%\gradle\wrapper\dists\%DIST%
-
-if not exist "%DIR%" (
-    mkdir "%DIR%"
-    curl -L %URL% -o %DIR%
-)
-java -jar "%DIR%"
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+zipStorePath=wrapper/dists
+zipStoreBase=GRADLE_USER_HOME
+distributionUrl=https\://services.gradle.org/distributions/gradle-7.3.3-all.zip
