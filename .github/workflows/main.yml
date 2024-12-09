@@ -33,6 +33,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
+      # grant permisiion to gradlew
+
+      -  name: Grant execute permissions for gradlew
+        run: chmod +x ./gradlew
+
       # Build the APK
       - name: Build with Gradle
         run: ./gradlew assembleDebug
